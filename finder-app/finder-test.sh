@@ -1,6 +1,15 @@
 #!/bin/sh
 # Tester script for assignment 1 and assignment 2
 # Author: Siddhant Jajoo
+# Clean any previous build artifacts
+make clean
+
+# Compile your writer application using native compilation
+make
+
+# Use your "writer" utility instead of "writer.sh" shell script
+./writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+
 
 set -e
 set -u
